@@ -8,6 +8,9 @@
 
 <body>
     <header>
+        <div id= "banner">
+            <img src="<?= base_url().'/assets/images/banner.jpeg'?>">
+        </div>    
         <div id="menu">
             <ul>
                 <li class="item"><a href="<?= base_url().'index.php/welcome/index' ?>">Página Inicial</a></li>
@@ -19,11 +22,6 @@
         </div>
     </header>
         <div id="fundo">
-
-            <div id= "banner">
-                <img src="<?= base_url().'/assets/images/banner.jpeg'?>">
-            </div>
-            
             <div id="imagem">
                     <h1>Diagrama Entidade Relacionamento</h1>
                     <img src="<?= base_url().'/assets/images/bolsa_familia1.jpeg'?>">
