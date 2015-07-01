@@ -11,11 +11,11 @@
     <header>
         <div id="menu">
             <ul>
-                <li class="item"><a href="home.php">Página Inicial</a></li>
-                <li class="item"><a href="intro.php">Nosso Trabalho</a></li>
-                <li class="item"><a href="mer.php">MER</a></li>
-                <li class="item"><a href="der.php">DER</a></li>
-                <li class="item"><a href="der.php">Perguntas</a></li>
+                <li class="item"><a href="<?= base_url().'index.php/welcome/index' ?>">Página Inicial</a></li>
+                <li class="item"><a href="<?= base_url().'index.php/welcome/intro' ?>">Nosso Trabalho</a></li>
+                <li class="item"><a href="<?= base_url().'index.php/welcome/mer' ?>">MR</a></li>
+                <li class="item"><a href="<?= base_url().'index.php/welcome/der' ?>">DER</a></li>
+                <li class="item"><a href="<?= base_url().'index.php/welcome/teste' ?>">Perguntas</a></li>
             </ul>
         </div>
     </header>
@@ -23,7 +23,7 @@
             <div id= "banner">
                 <img src="<?= base_url().'/assets/images/banner.jpeg'?>">
             </div>
-            <a class="btn btn-primary" href="<?= base_url().'index.php/welcome/teste' ?>">TESTE</a>
+            
             <div id="imagem">
                		<img src="<?= base_url().'/assets/images/LOGO-BOLSA-FAMILIA.jpg'?>">
             </div>

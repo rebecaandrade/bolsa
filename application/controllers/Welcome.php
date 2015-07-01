@@ -27,4 +27,19 @@ class Welcome extends CI_Controller {
 		$this->load->model("model");
 		$this->model->teste();
 	}
+
+	public function mer() {
+		$this->load->view('mer');
+	}
+
+	public function intro() {
+		
+		$this->load->view('intro');
+	}
+
+	public function der() {
+		$this->load->view('der');
+	}
+
+
 }
