@@ -16,4 +16,9 @@ class Favorecido_model extends CI_Model {
             $query = $this->db->get('Favorecido', $maximo, $inicio);
             return $query->result();
         }
+        function buscar($nome){
+            $this->db->like('NomeFavorecido', $nome);
+            $query = $this->db->get('Favorecido');
+            return $query->result();
+        }
 }

@@ -28,4 +28,15 @@ class Favorecido extends CI_Controller {
 
         $this->load->view('favorecido/index', $param);
     }
+
+    public function busca(){
+        $this->load->view("favorecido/busca");
+    }
+
+    public function buscar(){
+        $nome = $this->input->post('nome');
+
+        $data["favorecidos"] = $this->favorecido_model->buscar($nome);
+        $this->load->view("favorecido/resultado",$data);
+    }
 }
