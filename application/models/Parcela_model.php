@@ -16,4 +16,14 @@ class Parcela_model extends CI_Model {
             $query = $this->db->get('Parcela', $maximo, $inicio);
             return $query->result();
         }
+        function mediaParcela(){
+            $this->db->select_avg('Valor Parcela');
+            $query = $this->db->get('Parcela');
+            return $query->result();
+        }
+        function somaParcela(){
+            $this->db->select_sum('Valor Parcela');
+            $query = $this->db->get('Parcela');
+            return $query->result();
+        }
 }
