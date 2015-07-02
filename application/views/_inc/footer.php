@@ -1,4 +1,3 @@
-<<<<<<< HEAD
             <footer>
                 <p> UnB - Universidade de Brasília </p>
                 <p> CIC/EST - Departamento de Ciência da Computação e Estatística </p>
@@ -9,10 +8,7 @@
 </div>
 </body>
 </html>
-=======
     </div>
 
 </body>
 </html>
-
->>>>>>> 302029cc09ddabbd56cbb9db73d0702f1979fa8e
