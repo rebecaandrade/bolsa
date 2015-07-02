@@ -7,7 +7,7 @@
     </tr>
     <?php foreach ($favorecidos as $favorecido): ?>
             <tr>
-                <td><?php echo(get_object_vars ($favorecido)['NIS'])?></td>
+                <td><?php echo(get_object_vars ($favorecido)['NIS Favorecido'])?></td>
                 <td><?php echo(get_object_vars ($favorecido)['Nome Favorecido'])?></td>
                 <td><?php echo(get_object_vars ($favorecido)['Código SIAFI Município'])?></td>
             </tr>
