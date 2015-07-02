@@ -12,8 +12,8 @@
             <li><a href="index.php/parcela">Parcelas</a></li>
         </ul>
         <ul>
-            <li>Perguntas</li>
-            <li>UF que mais recebe</li>
+            <li>Perguntas:</li>
+            <li><a href="index.php/municipio/maisrecebe">UF que mais recebe</a></li>
             <li>Pessoa que mais recebe</li>
             <li>Pessoa que menos recebe</li>
         </ul>

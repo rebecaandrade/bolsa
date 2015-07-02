@@ -9,4 +9,11 @@ class Municipio_model extends CI_Model {
             $query = $this->db->get('Municipio');
             return $query->result_array();
         }
+        function contaRegistros() {
+          return $this->db->count_all_results('Municipio');
+        }
+        function retornaLista2($maximo, $inicio){
+            $query = $this->db->get('Municipio', $maximo, $inicio);
+            return $query->result();
+        }
 }

@@ -7,9 +7,25 @@ class Municipio extends CI_Controller {
             $this->load->model('municipio_model');
     }
 
-    public function index(){
-        $data['municipios'] = $this->municipio_model->get_municipios();
-        $this->load->view('municipio/index',$data);
-    }
+    function index(){
+        $this->load->library('pagination');
 
+        $maximo = 100;
+        $inicio = (!$this->uri->segment("3")) ? 0 : $this->uri->segment("3");
+
+        $config['base_url'] = '/bolsa/index.php/municipio/index';
+        $config['total_rows'] = $this->municipio_model->contaRegistros();
+        $config['per_page'] = $maximo;
+        $config['first_link'] = 'Primeiro';
+        $config['last_link'] = 'Último';
+        $config['next_link'] = 'Próximo';
+        $config['prev_link'] = 'Anterior';
+
+        $this->pagination->initialize($config);
+
+        $param["paginacao"] = $this->pagination->create_links();
+        $param["municipios"] = $this->municipio_model->retornaLista2($maximo, $inicio);
+
+        $this->load->view('municipio/index', $param);
+    }
 }
