@@ -17,12 +17,27 @@ class Parcela_model extends CI_Model {
             return $query->result();
         }
         function mediaParcela(){
-            $this->db->select_avg('Valor Parcela');
+            $this->db->select_avg("ValorParcela");
             $query = $this->db->get('Parcela');
             return $query->result();
         }
         function somaParcela(){
-            $this->db->select_sum('Valor Parcela');
+            $this->db->select_sum('ValorParcela');
+            $query = $this->db->get('Parcela');
+            return $query->result();
+        }
+        function TotalPessoaParcela($nis){
+            $this->db->select_sum('ValorParcela');
+            $query = $this->db->get_where('Parcela', array('NISFavorecido' => $nis));
+            return $query->result();
+        }
+        function menorParcela(){
+            $this->db->select_min('ValorParcela');
+            $query = $this->db->get('Parcela');
+            return $query->result();
+        }
+        function maiorParcela(){
+            $this->db->select_max('ValorParcela');
             $query = $this->db->get('Parcela');
             return $query->result();
         }

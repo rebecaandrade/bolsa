@@ -25,6 +25,11 @@ class Parcela extends CI_Controller {
 
         $param["paginacao"] = $this->pagination->create_links();
         $param["parcelas"] = $this->parcela_model->retornaLista2($maximo, $inicio);
+        $param["parcelasmedia"] = $this->parcela_model->mediaParcela();
+        $param["parcelassoma"] = $this->parcela_model->somaParcela();
+        $param["parcelasminimia"] = $this->parcela_model->menorParcela();
+        $param["parcelasmaxima"] = $this->parcela_model->maiorParcela();
+        $param["parcelaspessoa"] = $this->parcela_model->TotalPessoaParcela(10000151723);
 
         $this->load->view('parcela/index', $param);
     }
